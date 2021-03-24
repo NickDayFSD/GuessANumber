@@ -12,7 +12,7 @@ test('should take in an integer and return as "high", "correct", "low"', (expect
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = true;
+
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actualLow, 'less', 'guess is low');
