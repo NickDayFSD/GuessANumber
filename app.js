@@ -37,4 +37,5 @@ tryAgain.addEventListener('click', () => {
     console.log(randomNumber, 'random number reset');
     console.log(guessesLeft, 'guesses reset');
     userNumber.value = '';
+    results.textContent = '';
 });
