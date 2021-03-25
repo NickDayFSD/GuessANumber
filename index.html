@@ -27,17 +27,14 @@
             <p>
                 The game is simple! I will pick a number between 1 and 20, and you will have 4 chances to guess the number!
             </p>
-            <input class='user-guess' id='user-guess' type='number'>
+            <input class='user-guess' id='user-guess' placeholder='Guess Here!' type='number'>
             <div>
-                <button class='guess-now' id='guess-now'>GUESS!</button>
-                <button class='try-again' id='try-again'>Restart</button>
+                <button class='guess-now hidden' id='guess-now'>GUESS!</button>
+                <button class='try-again hidden' id='try-again'>Restart</button>
             </div>
             <div class='results' id='results'></div>
         </section>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
 
     <script type="module" src="app.js"></script>
 </body>
