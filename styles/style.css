@@ -28,6 +28,8 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-color: rgb(158, 196, 196);
+    background-image: 
 }
 
 section {
@@ -98,7 +100,86 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
+
+.user-guess {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.user-guess:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.user-guess:active {
+	position:relative;
+	top:1px;
+}
+
+.guess-now {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
+.guess-now:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+.guess-now:active {
+	position:relative;
+	top:1px;
+}
+
+.try-again {
+	box-shadow:inset 0px 1px 0px 0px #e07070;
+	background:linear-gradient(to bottom, #c20404 5%, #a60a0a 100%);
+	background-color:#c20404;
+	border-radius:6px;
+	border:1px solid #b80707;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #800a0a;
+}
+.try-again:hover {
+	background:linear-gradient(to bottom, #a60a0a 5%, #c20404 100%);
+	background-color:#a60a0a;
+}
+.try-again:active {
+	position:relative;
+	top:1px;
+}
+
+.hidden {
+    display: none;
+}
+
   @keyframes pulse {
     20% {
       transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);

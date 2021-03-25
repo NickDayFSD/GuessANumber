@@ -10,29 +10,40 @@ const tryAgain = document.getElementById('try-again');
 let randomNumber = Math.ceil(Math.random() * 20);
 let guessesLeft = 4;
 //console.log(userNumber.value, 'value of my input');
+guessNow.classList.remove('hidden');
 
 console.log(randomNumber);
 // set event listeners to update state and DOM
 guessNow.addEventListener('click', () => {
-    if(guessesLeft <= 0){
+    if (guessesLeft <= 0){
         alert('You ran out of guesses!');
         return;
     }
     //reduce guess count
     guessesLeft--;
 
-    console.log(guessesLeft);
-    //console.log(userNumber.value, 'value of input');
+    const guessResults = isNumber(userNumber.valueAsNumber, randomNumber);
 
-    const guessResults = isNumber(userNumber.value, randomNumber);
-    console.log(guessResults, 'guesses left');
-    results.textContent = guessResults;
-    return `You have ${guessesLeft} guesses remaining.`;
+    //check if user wins
+    if (userNumber.valueAsNumber === randomNumber || guessesLeft === 0) {
+        results.textContent = guessResults;
+        guessNow.classList.add('hidden');
+        tryAgain.classList.remove('hidden');
+    };
+    //if user wins hide guess button and reveal reset button
+    //if user doesn't win, check results
+    results.textContent = `${guessResults} You have ${guessesLeft} guesses remaining.`;
+    //if user is out of guesses, hide guess button and reveal reset button
+    userNumber.value = '';
 });
 
 tryAgain.addEventListener('click', () => {
     randomNumber = Math.ceil(Math.random() * 20);
     guessesLeft = 4;
     console.log(randomNumber, 'random number reset');
-    console.log(guessesLeft, 'guesses reset')
-})
+    console.log(guessesLeft, 'guesses reset');
+    userNumber.value = '';
+    results.textContent = '';
+    guessNow.classList.toggle('hidden');
+    tryAgain.classList.toggle('hidden');
+});
